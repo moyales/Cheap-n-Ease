@@ -17,20 +17,24 @@
                 <div class="box-header">
                     <h2 id="box">Log In</h2>
                 </div>
-               <label for="username">Username</label> 
+                <div id="logbox-input">
+                    <label for="username" class="login-label">Username</label> 
+                    <br/>
+                    <input type="text" id="username">
+                    <br/>
+                    <label for="password" class="login-label">Password</label>
+                    <br/>
+                    <input type="text" id="password">
+                </div>
                <br/>
-               <input type="text" id="username">
+               <button type="submit" id="login-button" onclick="window.location.href='welcome_page.html'">Sign In</button> 
                <br/>
-               <label for="password">Password</label>
-               <br/>
-               <input type="text" id="password">
-               <br/>
-               <button type="submit" id="login-button" onclick="">Sign In</button> 
-               <br/>
-               <small class="log-small">Forgot your password? </small> <br>
-               <small>Recover it <a href="https://www.google.com">here</a>.</small> <br>
-               <small class="log-small">New to Cheap & Ease? </small> <br>
-               <small>Sign up <a href="https://www.bing.com">here</a>.</small>
+               <div id="login-small-sect">
+                <small class="log-small">Forgot your password? </small> <br>
+                <small>Recover it <a class="login-link" href="signup.html">here</a>.</small> <br>
+                <small class="log-small">New to Cheap & Ease? </small> <br>
+                <small>Sign up <a class="login-link" href="https://www.bing.com">here</a>.</small>
+               </div>
             </div>
         </div>
     </body>
