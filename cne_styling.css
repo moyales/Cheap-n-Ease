@@ -9,13 +9,14 @@ body{
     margin: 0;
 }
 h1{
-    color: white;
+    color: #ad271d;
 }
 header{
     background-color:  #ad271d;
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
+    align-items: center;
 }
 
 /*Login Styling*/
@@ -102,4 +103,29 @@ h2#box{
 }
 #homepage{
     font-size: 2.5em;
+    color: white;
+    margin: 0;
+}
+#homepage-body{
+    background-color: #fff4eb;
+}
+#homepage-subtitle{
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+    margin: 2px;
+}
+.dashboard{
+    display: flex;
+    padding: 12px;
+}
+.dashboard-head{
+    background-color: #ba5541;
+    color: white;
+    text-align: center;
+    width: 600px;
+    border-radius: 10px / 5px;
+}
+.dashboard-body{
+    background-color: white;
 }
