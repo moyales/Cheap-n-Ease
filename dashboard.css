@@ -169,10 +169,17 @@ aside .balance {
     align-items: center;
 }
 
+aside .balance h2 {
+    margin: -20px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
 aside .balance h1 {
     display: inline;
     font-weight: 400;
     font-size: 48px;
+    margin-top: -50px;
 }
 
 aside .balance span {
@@ -197,6 +204,24 @@ aside .recent {
     overflow: scroll;
 }
 
+aside .recent h1 {
+    position: sticky;
+    top: -20px;
+    text-align: center;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    z-index: 5;
+    font-weight: 300;
+    font-size: 18px;
+    border-bottom: 3px solid #000;
+}
+
+aside .recent h1 i {
+    float: right;
+}
+
 aside .recent li {
     display: flex;
     align-items: center;
@@ -208,7 +233,7 @@ aside .recent li {
     margin-bottom: 20px;
 }
 
-aside .recent li i {
+aside .recent li .up-down {
     float: left;
     font-size: 36px;
     color: #000;
@@ -223,7 +248,7 @@ aside .recent .loss {
     background: linear-gradient(-45deg, #f96390, #f00);
 }
 
-aside .recent li h1 {
+aside .recent li h2 {
     display: inline-block;
     flex: 2;
     font-weight: 900;
@@ -231,10 +256,10 @@ aside .recent li h1 {
     margin: 0 5px;
 }
 
-aside .recent li p {
+aside .recent li .category {
     display: inline-block;
     float: right;
-    font-size: 12px;
+    font-size: 24px;
     font-weight: 300;
     max-width: 80px;
     text-overflow: ellipsis;
