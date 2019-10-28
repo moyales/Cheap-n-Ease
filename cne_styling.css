@@ -1,6 +1,8 @@
-/*General website styles go here*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/*Universal Website Styles*/
+html, body {
+    background: linear-gradient(-30deg, #ece3fc, #d3f0f5);
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 .ampersand{
     color: black;
@@ -9,10 +11,10 @@ body{
     margin: 0;
 }
 h1{
-    color: #ad271d;
+    color: #1d366e;
 }
 header{
-    background-color:  #ad271d;
+    background-color:  #fff;
     align-items: center;
     display: flex;
 }
@@ -23,11 +25,9 @@ header{
 }
 .navbar li a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
-.profile-corner{
-    
-}
+
 
 /*Login Styling*/
 header #login-logo{
@@ -36,7 +36,7 @@ header #login-logo{
     width: auto;
 }
 .box-header{
-    background-color: #db250d;
+    background-color: #6a8dd9;
     margin-top: 0;
     border-radius: 5px 5px 0 0;
     padding-top: 1px;
@@ -91,18 +91,18 @@ h2#box{
 	font-weight: 400;
 	font-size: 1em;
 	letter-spacing: 1px;
-	background-color: #eb6d54;
+	background-color: #6994f0;
     outline: none;
     cursor: pointer;
 }
 .login-box button:hover{
-    background-color: #ba5541;
+    background-color: #4269bd;
 }
 .login-link{
     text-decoration: none;
 }
 .login-link:hover{
-    color: #eb9e8f; 
+    color: ; 
 }
 
 #password-forget{
@@ -149,43 +149,4 @@ h2#box{
 
 #signup-page button:hover{
     background-color: #ba5541;
-}
-
-
-/*Homepage Styling*/
-.logo{
-    margin-left: 20px;
-    height: 60px;
-    width: auto;
-}
-#homepage{
-    font-size: 2.5em;
-    color: white;
-    margin: 0;
-}
-#homepage-body{
-    background-color: #fff4eb;
-}
-#homepage-subtitle{
-    color: white;
-    font-size: 1em;
-    font-style: italic;
-    margin: 2px;
-}
-.dashboard{
-    display: flex;
-    padding: 12px;
-}
-.dashboard-head{
-    background-color: #ba5541;
-    color: white;
-    text-align: center;
-    width: 700px;
-    border-radius: 10px / 5px;
-    flex-direction: column;
-    margin-left: 100px;
-}
-.dashboard-body{
-    background-color: white;
-    flex-direction: column;
 }
