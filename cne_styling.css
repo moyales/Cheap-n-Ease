@@ -95,6 +95,11 @@ h2#box{
 }
 
 #password-forget-button{
+    padding: 0px;
+    margin: 0px;
+}
+
+#password-forget-button button{
     background-color: rgb(93, 93, 180);
 }
 
