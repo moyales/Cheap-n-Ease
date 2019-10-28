@@ -90,7 +90,46 @@ h2#box{
     color: #eb9e8f; 
 }
 
+#password-forget{
+    background-color: rgb(29, 29, 138);
+}
+
+#password-forget-button{
+    background-color: rgb(93, 93, 180);
+}
+
+#password-forget-button button:hover{
+    background-color: rgb(44, 44, 112);
+}
+
+
 /*Signup Styling*/
+#signup-page{
+    background-color: #f7ebd7; 
+}
+
+#signup-page ul{
+    list-style-image: url(starbullet.svg) ;
+}
+
+#signup-page button{
+    margin-top: 0px;
+	border: 0;
+	border-radius: 2px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #eb6d54;
+    outline: none;
+    cursor: pointer;
+}
+
+#signup-page button:hover{
+    background-color: #ba5541;
+}
 
 
 /*Homepage Styling*/
