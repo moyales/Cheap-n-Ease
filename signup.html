@@ -9,11 +9,43 @@
         <link rel="stylesheet" href="cne_styling.css">
         <link rel="icon" href="cne-logo.png">
     </head>
-    <body>
-        <h1>Welcome to Cheap & Ease.</h1>
+    <body id = "signup-page">
+        <h1>Welcome to Cheap & Ease!</h1>
         <p>
             Creating an account for Cheap & Ease is as simple as the service we provide. <br>
             Join now and let us help you get those college finances in order!
         </p>
+        <br/>
+        <div>
+            <p>Username: <input type="text" id="username"></p>
+            <ul>
+                <li>The name of your account on Cheap & Ease!</li>
+                <li>Make it something fun, or serious, or whatever you like...</li>
+                <li>It just has to be 3-20 characters long, and cannot have any spaces.</li>
+            </ul>
+        </div>
+        <br/>
+        <div>
+            <p>Password: <input type="password" id="password"></p>
+            <ul>
+                <li>So we can verify that your account is yours.</li>
+                <li>A good password should have a mixture of uppercases, lowercases, and special characters...</li>
+                <li>But make sure that you can remember it.</li>
+                <li>Has to be 3-20 characters long, and no spaces, just like your username.</li>
+            </ul>
+        </div>
+        <br/>
+        <div>
+               <p>Email Address: <input type="email" id="email"></p>
+               <ul>
+                   <li>How we verify changes to your account.</li>
+                   <li>Make sure you'll always be able to access this email address.</li>
+               </ul>
+        </div>
+        <br/>
+        <button type="submit" onclick="window.location.href='homepage.html'">Create My Account</button>
+        <br/>
+        <br/>
+        <p>Already have an account? Login <a href="login.html" class="login-link">here</a>.</p>
     </body>
 </html>
