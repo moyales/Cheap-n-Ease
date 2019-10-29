@@ -147,6 +147,12 @@ input[type=text],[type=password], select{
 .login-link{
     text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+.login-link:hover{
+    color: #7777ff; 
+}
+>>>>>>> 38e64a4d9b76832d9089bd2637bcf3b18664ae2e
 
 #password-forget{
     background-color: rgb(29, 29, 138);
