@@ -120,7 +120,7 @@ header #new-note {
     width: 8px;
     border: 3px solid #fff;
     border-radius: 50%;
-    /visibility: hidden;
+    visibility: hidden;
 }
 
 header #profile {
@@ -289,4 +289,13 @@ section div {
 
 section .pie {
     
+}
+
+.dashboard-links{
+    text-decoration: none;
+    color: #000;
+}
+.dashboard-links:hover{
+    text-decoration: underline;
+    color: #5c5c5e;
 }

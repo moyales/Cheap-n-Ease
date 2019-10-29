@@ -13,9 +13,11 @@
     </head>
     <body id="login">
         <header>
+            <img src="cne-home-logo.png" alt="CNE Logo" class="header-logo">
             <ul class="navbar">
                 <li><a href="">What is C&E?</a></li>
                 <li><a href="">About Us</a></li>
+                <li id="signup"><a href="signup.html" id="signup-bg">Sign Up</a></li>
             </ul>
         </header>
         <div class="container">
@@ -33,16 +35,13 @@
                     <br/>
                     <label for="password" class="login-label">Password</label>
                     <br/>
-                    <input type="password" id="password">
+                    <input type="password" type="text" id="password" placeholder="password">
                 </div>
                <br/>
                <button type="submit" id="login-button" onclick="window.location.href='dashboard.html'">Sign In</button> 
                <br/>
                <div id="login-small-sect">
-                <small class="log-small">Forgot your password? </small> <br>
-                <small>Recover it <a class="login-link" href="forgot_password.html">here</a>.</small> <br>
-                <small class="log-small">New to Cheap & Ease? </small> <br>
-                <small>Sign up <a class="login-link" href="signup.html">here</a>.</small>
+                <small class="log-small"><a class="login-link" href="forgot_password.html">Forgot your password? </a></small>
                </div>
             </div>
         </div>
