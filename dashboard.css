@@ -120,7 +120,7 @@ header #new-note {
     width: 8px;
     border: 3px solid #fff;
     border-radius: 50%;
-    visibility: hidden;
+    /visibility: hidden;
 }
 
 header #profile {
@@ -142,7 +142,20 @@ header #profile span {
 
 header #profile i {
     font-size: 36px;
-    margin-left: 10px;
+    maring-left: 10px;
+}
+
+.open {
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.open:hover {
+    opacity: 0.6;
+}
+
+.open:active {
+    opacity: 0.4;
 }
 
 aside {
@@ -171,8 +184,15 @@ aside .balance {
 
 aside .balance h2 {
     margin: -20px;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 18px;
+    opacity: 0.7;
+}
+
+aside .balance i {
+    position: absolute;
+    top: 60px;
+    right: 60px;
 }
 
 aside .balance h1 {
@@ -191,7 +211,8 @@ aside .balance span {
     opacity: 0.7;
 }
 
-aside .recent {
+aside .history {
+    position: relative;
     width: 100%;
     height: calc(100% - 220px);
     background: #fff;
@@ -201,16 +222,86 @@ aside .recent {
     padding: 20px;
     box-sizing: border-box;
     align-items: center;
-    overflow: scroll;
 }
 
-aside .recent h1 {
+aside .history .add_btn {
     position: sticky;
-    top: -20px;
+    padding: 20px 0;
+    width: 100%;
+    color: #000;
+    background: #fff;
+    border-top: 3px solid #000;
+    border-radius: 0  0 12px 12px;
+    text-shadow: 3px 3px 0 #bbb;
+    cursor: pointer;
+    z-index: 13;
+    transition: all 500ms;
+}
+
+aside .history .add_btn:hover {
+    text-shadow: 6px 6px 2px #ccc;
+    background: #eee;
+}
+
+aside .history .add_btn:active {
+    text-shadow: none;
+    background: #ccc;
+}
+
+aside .history form {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 0;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: height 500ms ease-out;
+    overflow: hidden;
+}
+
+aside .history form i {
+    color: #7d7d7d;
+    text-shadow: 3px 3px 0 #bbb;
+    cursor: pointer;
+    transition: text-shadow 500ms;
+}
+
+aside .history form i:hover {
+    text-shadow: 6px 6px 2px #ccc;
+}
+
+aside .history form i:hover {
+    text-shadow: none;
+}
+
+aside .history form input {
+    display: block;
+    background: #000;
+    border: 3px solid #000;
+    color: #fff;
+    width: 40%;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 12px;
+    border-radius: 12px;
+    transition: all 400ms;
+}
+
+aside .history form input:focus {
+    background: #fff;
+    color: #000;
+}
+
+aside .history h1 {
+    position: sticky;
+    top: 0;
     text-align: center;
     background: #fff;
     width: 100%;
-    margin-bottom: 20px;
     padding: 20px 0;
     z-index: 5;
     font-weight: 300;
@@ -218,14 +309,20 @@ aside .recent h1 {
     border-bottom: 3px solid #000;
 }
 
-aside .recent h1 i {
+aside .history h1 i {
     float: right;
 }
 
-aside .recent li {
+aside .history .recent {
+    padding: 20px 0;
+    height: calc(100% - 170px);
+    overflow: scroll;
+}
+
+aside .history .recent li {
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 50px;
     padding: 20px;
     text-align: center;
     background: #f1f1f1;
@@ -233,22 +330,22 @@ aside .recent li {
     margin-bottom: 20px;
 }
 
-aside .recent li .up-down {
+aside .history .recent li .up-down {
     float: left;
     font-size: 36px;
     color: #000;
     opacity: 0.5;
 }
 
-aside .recent .growth {
+aside .history .recent .growth {
     background: linear-gradient(-45deg, var(--teal), #0f0);
 }
 
-aside .recent .loss {
+aside .history .recent .loss {
     background: linear-gradient(-45deg, #f96390, #f00);
 }
 
-aside .recent li h2 {
+aside .history .recent li h2 {
     display: inline-block;
     flex: 2;
     font-weight: 900;
@@ -256,7 +353,7 @@ aside .recent li h2 {
     margin: 0 5px;
 }
 
-aside .recent li .category {
+aside .history .recent li .category {
     display: inline-block;
     float: right;
     font-size: 24px;
@@ -287,15 +384,19 @@ section div {
     grid-row: span 2;
 }
 
-section .pie {
-    
+section div h1 {
+    position: sticky;
+    top: -20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    z-index: 5;
+    font-weight: 300;
+    font-size: 18px;
+    border-bottom: 3px solid #000;
 }
 
-.dashboard-links{
-    text-decoration: none;
-    color: #000;
-}
-.dashboard-links:hover{
-    text-decoration: underline;
-    color: #5c5c5e;
+section div h1 i {
+    float: right;
 }
