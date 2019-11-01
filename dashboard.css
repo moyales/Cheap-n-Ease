@@ -291,10 +291,15 @@ section .pie {
     
 }
 
+section .dashboard-header{
+    background-color: #90e3fc;
+}
+
 .dashboard-links{
     text-decoration: none;
     color: #000;
 }
+
 .dashboard-links:hover{
     text-decoration: underline;
     color: #5c5c5e;

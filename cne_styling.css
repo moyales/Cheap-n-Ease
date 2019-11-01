@@ -73,6 +73,9 @@ header #login-logo{
     background-color: #124fcc;
     color: white;
 }
+#signup-bg:hover{
+    background-color: #0a3794;
+}
 
 h1#login-title{
     font-weight: 250;
@@ -147,12 +150,10 @@ input[type=text],[type=password], select{
 .login-link{
     text-decoration: none;
 }
-<<<<<<< HEAD
-=======
+
 .login-link:hover{
     color: #7777ff; 
 }
->>>>>>> 38e64a4d9b76832d9089bd2637bcf3b18664ae2e
 
 #password-forget{
     background-color: rgb(29, 29, 138);
@@ -175,7 +176,7 @@ input[type=text],[type=password], select{
 
 /*Signup Styling*/
 #signup-page{
-    background-color: #f7ebd7; 
+    font-family: 'Roboto', sans-serif; 
 }
 
 #signup-page ul{
