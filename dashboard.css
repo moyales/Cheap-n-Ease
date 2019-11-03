@@ -142,7 +142,7 @@ header #profile span {
 
 header #profile i {
     font-size: 36px;
-    maring-left: 10px;
+    margin-left: 10px;
 }
 
 .open {
@@ -189,7 +189,7 @@ aside .balance h2 {
     opacity: 0.7;
 }
 
-aside .balance i {
+aside .balance .open {
     position: absolute;
     top: 60px;
     right: 60px;
@@ -202,7 +202,11 @@ aside .balance h1 {
     margin-top: -50px;
 }
 
-aside .balance span {
+aside .balance h1 #b_amount {
+    font-style: normal;
+}
+
+aside .balance h1 span {
     position: relative;
     top: -5px;
     left: -5px;
@@ -263,37 +267,125 @@ aside .history form {
     overflow: hidden;
 }
 
-aside .history form i {
+aside .history form .cancel {
+    display: block;
     color: #7d7d7d;
     text-shadow: 3px 3px 0 #bbb;
     cursor: pointer;
     transition: text-shadow 500ms;
 }
 
-aside .history form i:hover {
+aside .history form .cancel:hover {
     text-shadow: 6px 6px 2px #ccc;
 }
 
-aside .history form i:hover {
+aside .history form .cancel:active {
     text-shadow: none;
 }
 
-aside .history form input {
-    display: block;
-    background: #000;
-    border: 3px solid #000;
-    color: #fff;
-    width: 40%;
+aside .history form #cost {
+    display: inline-block;
+    width: 35%;
+    background: #ddd;
+    border: none;
     padding: 10px;
-    margin: 20px auto;
+    margin: 40px auto 0 auto;
     font-size: 12px;
     border-radius: 12px;
     transition: all 400ms;
 }
 
-aside .history form input:focus {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+aside .history form label[for="cost"] {
+    display: inline-block;
+    width: 5%;
+}
+
+aside .history form #cost:focus {
     background: #fff;
-    color: #000;
+    outline: none;
+}
+
+aside .history form #up_or_down {
+    display: flex;
+    width: 40%;
+    min-width: fit-content;
+    margin: 20px auto;
+    background: #ddd;
+    border-radius: 12px;
+}
+
+aside .history form #up_or_down label {
+    flex: 1;
+    padding: 5px 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+aside .history form #up_or_down #label_down {
+    border-radius: 12px 0 0 12px;
+    transition: background 300ms;
+}
+
+aside .history form #up_or_down #label_down:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transition: background 300ms;
+}
+
+aside .history form #up_or_down #label_up:hover {
+    background: rgba(0, 255, 0, 0.3);
+}
+
+aside .history form #up_or_down #label_up {
+    border-radius: 0 12px 12px 0;
+}
+
+aside .history form #up_or_down input[type="radio"]:checked + #label_down {
+    background: linear-gradient(-45deg, #f96390, #f00);
+}
+
+aside .history form #up_or_down input[type="radio"]:checked + #label_up {
+    background: linear-gradient(-45deg, var(--teal), #0f0);
+}
+
+aside .history form #up_or_down label i {
+    line-height: 28px;
+}
+
+aside .history form #up_or_down input {
+    display: none;
+}
+
+aside .history form select {
+    display: block;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: #ddd;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 20px auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+aside .history form select option[value=""] {
+    color: #bbb;
 }
 
 aside .history h1 {
