@@ -1,4 +1,10 @@
 let history = [];
+let balance = 0.00;
+
+function set_balance(new_balance) {
+    balance = Number.parseFloat(new_balance).toFixed(2)
+    document.querySelector('#b_amount').innerHTML = balance
+}
 
 function add_hist(cost, category) {
     let new_payment = {
@@ -41,6 +47,7 @@ function add_hist(cost, category) {
     else ul.appendChild(new_li)
 
     history.push(new_payment)
+    set_balance(parseFloat(balance) + parseFloat(cost))
 }
 
 let hist_form_open = false
@@ -49,15 +56,17 @@ function toggle_hist_form(add) {
     if (hist_form_open) {
 
         let cost = document.querySelector('#cost')
+        let ud = document.querySelector('input[name="ud"]:checked')
         let category = document.querySelector('#category')
 
         if (add) {
-            add_hist(cost.value, category.value)
+            add_hist(cost.value * ud.value, category.value)
         }
 
         cost.value = ''
+        document.querySelector('#radio_down').checked = true
         category.value = ''
-        
+
         document.querySelector('.add_to_hist').style.height = '0'
         document.querySelector('.add_btn').style.textShadow = '3px 3px 0 #bbb'
         document.querySelector('.add_btn').style.background = '#fff'
@@ -66,6 +75,7 @@ function toggle_hist_form(add) {
         document.querySelector('.add_btn').style.textShadow = '6px 6px 2px #ccc'
         document.querySelector('.add_btn').style.background = '#eee'
 
+        document.querySelector('#cost').focus()
     }
 
     hist_form_open = !hist_form_open

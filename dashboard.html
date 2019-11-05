@@ -29,7 +29,7 @@
             <aside>
                 <div class="balance">
                     <h2>Balance<i class="material-icons open">open_in_new</i></h2><!--sub balances - check against goals -->
-                    <h1><span>$</span>000.00</h1>
+                    <h1><span>$</span><i id="b_amount">0.00</i></h1>
                 </div>
                 <div class="history">
                     <h1>History<i class="material-icons open">open_in_new</i></h1>
@@ -41,9 +41,25 @@
                         </li>-->
                     </ul>
                     <form class="add_to_hist">
-                        <i class="material-icons" onclick="toggle_hist_form(false)">cancel</i>
+                        <i class="material-icons cancel" onclick="toggle_hist_form(false)">cancel</i>
+                        <label for="cost">$</label>
                         <input type="number" step=any id="cost" value="" placeholder="cost"/>
-                        <input type="text" id="category" value="" placeholder="category"/>
+                        <div id="up_or_down">
+                            <input type="radio" name="ud" id="radio_down" value="-1" checked>
+                            <label for="radio_down" id="label_down"><i class="material-icons">arrow_drop_down</i></label>
+                            <input type="radio" name="ud" id="radio_up" value="1" >
+                            <label for="radio_up" id="label_up"><i class="material-icons">arrow_drop_up</i></label>
+                        </div>
+                        <!--<input type="text" id="category" value="" placeholder="category"/>-->
+                        <select id="category">
+                            <option value="" disabled selected hidden>category</option>
+                            <option value="fastfood">Food</option>
+                            <option value="local_movies">Entertainment</option>
+                            <option value="train">Transportation</option>
+                            <option value="shopping_cart">Shopping</option>
+                            <option value="school">School</option>
+                            <option value="other">Other</option>
+                        </select>
                     </form>
                     <i class="material-icons add_btn" onclick="toggle_hist_form(true)">add_box</i>
 
@@ -62,15 +78,16 @@
                     <h1>Stats <i class="material-icons open">open_in_new</i></h1>
                 </div> <!-- with categories -->
                 <!--
-                    - Food
-                    - Entertainment
-                    - travel
-                    - School
+                    - Food -> fastfood
+                    - Entertainment -> local_movies
+                    - travel -> train
+                    - shopping -> shopping_cart
+                    - School -> school
                     - Discretionary
 
                     Recurring
-                    - Subscriptions
-                    - Utilities / Rent
+                    - Subscriptions -> restore
+                    - Utilities / Rent -> home_work
                 -->
 
             </section>
