@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>C&E | Dashboard</title>
+        <title>C&E - Dashboard</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="dashboard.css">
@@ -18,48 +18,48 @@
                     <h1>Cheap<span>&</span>Ease</h1>
                 </div>
                 <div class="right">
-                    <i class="material-icons" id="note">notifications</i>
-                    <i id="new-note"></i>
+                    <!--<i class="material-icons" id="note">notifications</i>
+                    <i id="new-note"></i>-->
                     <div id="profile">
                         <span id="username">Username</span>
-                        <i class="material-icons" >account_circle</i>
+                        <i class="material-icons">account_circle</i>
                     </div>
                 </div>
             </header>
             <aside>
                 <div class="balance">
-                    <h2>Balance</h2><!--sub balances - check against goals -->
+                    <h2>Balance<i class="material-icons open">open_in_new</i></h2><!--sub balances - check against goals -->
                     <h1><span>$</span>000.00</h1>
                 </div>
-                <ul class="recent"> <!--way to add more transactions--> <!--name this history-->
-                    <h1>History<i class="material-icons">add_box</i></h1>
-                    <li class="loss">
-                        <i class="material-icons up-down">arrow_drop_down</i>
-                        <h2>$12.00</h2>
-                        <i class="material-icons category">fastfood</i>
-                    </li>
-                    <li class="loss">
-                        <i class="material-icons up-down">arrow_drop_down</i>
-                        <h2>$3.00</h2>
-                        <i class="material-icons category">train</i>
-                    </li>
-                    <li class="growth">
-                        <i class="material-icons up-down">arrow_drop_up</i>
-                        <h2>$29.58</h2>
-                        <i class="material-icons category">attach_money</i>
-                    </li>
-                </ul>
+                <div class="history">
+                    <h1>History<i class="material-icons open">open_in_new</i></h1>
+                    <ul class="recent"> <!--way to add more transactions--> <!--name this history-->
+                        <!--<li class="loss">
+                            <i class="material-icons up-down">arrow_drop_down</i>
+                            <h2>$12.00</h2>
+                            <i class="material-icons category">fastfood</i>
+                        </li>-->
+                    </ul>
+                    <form class="add_to_hist">
+                        <i class="material-icons" onclick="toggle_hist_form(false)">cancel</i>
+                        <input type="number" step=any id="cost" value="" placeholder="cost"/>
+                        <input type="text" id="category" value="" placeholder="category"/>
+                    </form>
+                    <i class="material-icons add_btn" onclick="toggle_hist_form(true)">add_box</i>
+
+
+
+                </div>
+
             </aside>
             <section>
-                <!--Budget/Savings Goals-->
-                <div class="goals">
-                    <div class="dashboard-header">
-                        <h1><a href="" class="dashboard-links">Goals</a></h1>
-                    </div>
+                <div class="">
+                    <h1>Goals <i class="material-icons open">open_in_new</i></h1>
+
                 </div>
-                <!-- budgeting -->
+                <!-- budgetting -->
                 <div class="pie">
-                    <h1><a href="" class="dashboard-links">Spending Stats</a></h1>
+                    <h1>Stats <i class="material-icons open">open_in_new</i></h1>
                 </div> <!-- with categories -->
                 <!--
                     - Food

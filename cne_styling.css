@@ -31,6 +31,10 @@ header{
     margin-right: 6px;
 }
 
+.navbar {
+    width: 100%;
+}
+
 .navbar li{
     display: inline;
     list-style-type: none;
@@ -67,6 +71,7 @@ header #login-logo{
 
 #signup{
     float: right;
+    margin-right: 20px;   
 }
 
 #signup-bg{
@@ -155,6 +160,7 @@ input[type=text],[type=password], select{
     color: #7777ff; 
 }
 
+/* Forgot Password*/
 #password-forget{
     background-color: rgb(29, 29, 138);
 }
@@ -172,6 +178,13 @@ input[type=text],[type=password], select{
     background-color: rgb(44, 44, 112);
 }
 
+input[type=email], select{
+    width: 80%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid gray;
+}
 
 
 /*Signup Styling*/
@@ -200,4 +213,20 @@ input[type=text],[type=password], select{
 
 #signup-page button:hover{
     background-color: #ba5541;
+}
+
+/* Confirmation */
+.confirmation{
+    background-color: white;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	top: 40px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    text-align: center;
+}
+.confirmation h1{
+    padding-top: 20px;
 }
