@@ -78,9 +78,6 @@ header #login-logo{
     background-color: #124fcc;
     color: white;
 }
-#signup-bg:hover{
-    background-color: #0a3794;
-}
 
 h1#login-title{
     font-weight: 250;
@@ -90,6 +87,19 @@ h1#login-title{
     text-align: center;
     padding-top: 80px;
     max-width: 400px;
+}
+
+h2#login-subtitle{
+    color: rgb(156, 88, 156);
+    font-weight: 250;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    max-width: 500px;
+    text-emphasis-style: bold;
+    font-weight: bold;
+    text-shadow: 2px 2px #aaa;
+    font-style: italic;
 }
 
 h2#box{
@@ -160,7 +170,6 @@ input[type=text],[type=password], select{
     color: #7777ff; 
 }
 
-/* Forgot Password*/
 #password-forget{
     background-color: rgb(29, 29, 138);
 }
@@ -178,18 +187,11 @@ input[type=text],[type=password], select{
     background-color: rgb(44, 44, 112);
 }
 
-input[type=email], select{
-    width: 80%;
-    padding: 12px 16px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid gray;
-}
 
 
 /*Signup Styling*/
 #signup-page{
-    font-family: 'Roboto', sans-serif; 
+    background-color: #f7ebd7; 
 }
 
 #signup-page ul{
@@ -213,20 +215,4 @@ input[type=email], select{
 
 #signup-page button:hover{
     background-color: #ba5541;
-}
-
-/* Confirmation */
-.confirmation{
-    background-color: white;
-	max-width: 600px;
-	margin: 0 auto;
-	position: relative;
-	top: 40px;
-	padding-bottom: 30px;
-	border-radius: 5px;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-    text-align: center;
-}
-.confirmation h1{
-    padding-top: 20px;
 }

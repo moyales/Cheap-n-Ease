@@ -489,19 +489,6 @@ section div h1 {
     border-bottom: 3px solid #000;
 }
 
-section .dashboard-header{
-    background-color: #90e3fc;
-}
-
-.dashboard-links{
-    text-decoration: none;
-    color: #000;
-}
-
-.dashboard-links:hover{
-    text-decoration: underline;
-    color: #5c5c5e;
-}
 section div h1 i {
     float: right;
 }
