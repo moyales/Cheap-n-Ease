@@ -3,6 +3,7 @@ html, body {
     background: linear-gradient(-30deg, #ece3fc, #d3f0f5);
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    background-image: url("light-blue-background.jpg");
 }
 
 .ampersand{
@@ -90,7 +91,7 @@ h1#login-title{
 }
 
 h2#login-subtitle{
-    color: rgb(156, 88, 156);
+    color: rgb(99, 151, 201);
     font-weight: 250;
     margin: 0 auto;
     padding-top: 20px;
@@ -98,7 +99,6 @@ h2#login-subtitle{
     max-width: 500px;
     text-emphasis-style: bold;
     font-weight: bold;
-    text-shadow: 2px 2px #aaa;
     font-style: italic;
 }
 
@@ -215,4 +215,15 @@ input[type=text],[type=password], select{
 
 #signup-page button:hover{
     background-color: #ba5541;
+}
+
+#aboutUs-paragraph{
+    color:rgb(96, 96, 247);
+    background-color: white;
+  border: solid rgb(238, 238, 169);
+  padding: 50px;
+  margin: 20px;
+  border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    font-style: italic;
 }
