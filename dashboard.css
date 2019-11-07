@@ -17,36 +17,25 @@ html, body {
 main {
     display: grid;
     grid-template-areas:
-        'header header header header header aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside';
+        'header header header aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside';
     grid-gap: 20px;
     width: 100%;
     height: 100%;
@@ -66,6 +55,7 @@ header {
     border-radius: 12px;
     align-items: center;
     grid-area: header;
+    z-index: 100000;
 }
 
 header .left {
@@ -557,3 +547,30 @@ section .stats #piechart div svg {
     height: 100%;
 }
 */
+
+nav {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-areas:
+            'header'
+            'aside'
+            'content';
+        overflow: scroll;
+    }
+
+    aside {
+        height: 100vh;
+    }
+
+    section {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    section .stats {
+    }
+}
