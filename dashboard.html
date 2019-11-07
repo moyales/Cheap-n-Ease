@@ -33,7 +33,7 @@
                 </div>
                 <div class="history">
                     <h1>History<i class="material-icons open">open_in_new</i></h1>
-                    <ul class="recent"> <!--way to add more transactions--> <!--name this history-->
+                    <ul class="recent">
                         <!--<li class="loss">
                             <i class="material-icons up-down">arrow_drop_down</i>
                             <h2>$12.00</h2>
@@ -42,57 +42,96 @@
                     </ul>
                     <form class="add_to_hist">
                         <i class="material-icons cancel" onclick="toggle_hist_form(false)">cancel</i>
-                        <label for="cost">$</label>
-                        <input type="number" step=any id="cost" value="" placeholder="cost"/>
-                        <div id="up_or_down">
-                            <input type="radio" name="ud" id="radio_down" value="-1" checked>
-                            <label for="radio_down" id="label_down"><i class="material-icons">arrow_drop_down</i></label>
-                            <input type="radio" name="ud" id="radio_up" value="1" >
-                            <label for="radio_up" id="label_up"><i class="material-icons">arrow_drop_up</i></label>
+                        <div class="scroll">
+                            <label for="cost">$</label>
+                            <input type="number" step=any id="cost" value="" placeholder="cost"/>
+                            <div id="up_or_down">
+                                <input type="radio" name="ud" id="radio_down" value="-1" checked>
+                                <label for="radio_down" id="label_down"><i class="material-icons">arrow_drop_down</i></label>
+                                <input type="radio" name="ud" id="radio_up" value="1" >
+                                <label for="radio_up" id="label_up"><i class="material-icons">arrow_drop_up</i></label>
+                            </div>
+                            <!--<input type="text" id="category" value="" placeholder="category"/>-->
+                            <select id="category">
+                                <option value="" disabled selected hidden>category</option>
+                                <option value="fastfood">Food</option>
+                                <option value="local_movies">Entertainment</option>
+                                <option value="train">Transportation</option>
+                                <option value="shopping_cart">Shopping</option>
+                                <option value="school">School</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <!--<input type="text" id="category" value="" placeholder="category"/>-->
-                        <select id="category">
-                            <option value="" disabled selected hidden>category</option>
-                            <option value="fastfood">Food</option>
-                            <option value="local_movies">Entertainment</option>
-                            <option value="train">Transportation</option>
-                            <option value="shopping_cart">Shopping</option>
-                            <option value="school">School</option>
-                            <option value="other">Other</option>
-                        </select>
                     </form>
                     <i class="material-icons add_btn" onclick="toggle_hist_form(true)">add_box</i>
-
-
-
                 </div>
-
             </aside>
             <section>
                 <div class="">
                     <h1>Goals <i class="material-icons open">open_in_new</i></h1>
+                </div>
+                <div class="stats">
+                    <h1>Stats <i class="material-icons open">open_in_new</i></h1>
+                    <p id="piechart"></p>
+                    <div class="by_category">
+                         <table>
+                             <th>Daily Expenses</th>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">fastfood</i></td>
+                                 <td>Food</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">theaters</i></td>
+                                 <td>Entertainment</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">train</i></td>
+                                 <td>Transportation</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">shopping_cart</i></td>
+                                 <td>Shopping</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">school</i></td>
+                                 <td>School</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">receipt</i></td>
+                                 <td>Other</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <th class="header2">Recurring Expenses</th>
+                             <tr>
+                                 <td class="icon"><i class="material-icons">restore</i></td>
+                                 <td>Subscriptions</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                             <tr>
+                                <td class="icon"><i class="material-icons">home_work</i></td>
+                                 <td>Utilities / Rent</td>
+                                 <td class="tcost">$<span>3.00</span></td>
+                                 <td class="tperc"><span>12.5</span>%</td>
+                             </tr>
+                         </table>
+                    </div>
 
                 </div>
-                <!-- budgetting -->
-                <div class="pie">
-                    <h1>Stats <i class="material-icons open">open_in_new</i></h1>
-                </div> <!-- with categories -->
-                <!--
-                    - Food -> fastfood
-                    - Entertainment -> local_movies
-                    - travel -> train
-                    - shopping -> shopping_cart
-                    - School -> school
-                    - Discretionary
-
-                    Recurring
-                    - Subscriptions -> restore
-                    - Utilities / Rent -> home_work
-                -->
-
             </section>
-            <!-- print -->
         </main>
+        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
