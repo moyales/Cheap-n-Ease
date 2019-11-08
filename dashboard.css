@@ -17,36 +17,25 @@ html, body {
 main {
     display: grid;
     grid-template-areas:
-        'header header header header header aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside'
-        'content content content content content aside aside';
+        'header header header aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside';
     grid-gap: 20px;
     width: 100%;
     height: 100%;
@@ -66,6 +55,7 @@ header {
     border-radius: 12px;
     align-items: center;
     grid-area: header;
+    z-index: 100000;
 }
 
 header .left {
@@ -243,13 +233,13 @@ aside .history .add_btn {
 }
 
 aside .history .add_btn:hover {
-    text-shadow: 6px 6px 2px #ccc;
-    background: #eee;
+    text-shadow: 6px 6px 2px #ccc !important;
+    background: #eee !important;
 }
 
 aside .history .add_btn:active {
-    text-shadow: none;
-    background: #ccc;
+    text-shadow: none !important;
+    background: #ccc !important;
 }
 
 aside .history form {
@@ -265,6 +255,14 @@ aside .history form {
     box-sizing: border-box;
     transition: height 500ms ease-out;
     overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+form .scroll {
+    height: calc(100% - 80px);
 }
 
 aside .history form .cancel {
@@ -465,7 +463,7 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 section div {
@@ -474,6 +472,8 @@ section div {
     border-radius: 12px;
     padding: 20px;
     grid-row: span 2;
+    width: calc(100% - 40px);
+    overflow: scroll;
 }
 
 section div h1 {
@@ -491,4 +491,86 @@ section div h1 {
 
 section div h1 i {
     float: right;
+}
+
+section .stats .by_category table {
+    width: 100%;
+    text-align: left;
+}
+
+section .stats .by_category table th {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+section .stats .by_category table tr {
+    display: flex;
+}
+
+section .stats .by_category td {
+    flex: 1;
+    padding: 5px;
+    vertical-align: bottom;
+    line-height: 24px;
+}
+
+section .stats .by_category .icon {
+    max-width: 24px;
+}
+
+.tcost, .tperc {
+    text-align: right;
+}
+
+section .stats .by_category table .header2 {
+    margin: 10px 0;
+}
+
+
+/*section .stats #piechart div {
+    position: static;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    background: #fff;
+    overflow: hidden;
+}
+
+section .stats #piechart div div {
+    display: flex;
+    width: 100% !important;
+    background: none;
+}
+
+section .stats #piechart div svg {
+    max-width: 100% !important;
+    height: 100%;
+}
+*/
+
+nav {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-areas:
+            'header'
+            'aside'
+            'content';
+        overflow: scroll;
+    }
+
+    aside {
+        height: 100vh;
+    }
+
+    section {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    section .stats {
+    }
 }
