@@ -21,10 +21,28 @@
                 <div class="right">
                     <!--<i class="material-icons" id="note">notifications</i>
                     <i id="new-note"></i>-->
-                    <div id="profile">
+                    <!--
+                    <div class="dropdown">
                         <span id="username">Username</span>
-                        <i class="material-icons">account_circle</i>
+                        <div id="user-dropdown">
+                            <button onclick="openUserDropdown()" class="droptbn"><i class="material-icons" id="user-icon">account_circle</i></button>
+                            <div id="dropdown" class="dropdown-content">
+                                <a href="test1">Test1</a>
+                                <a href="test2">Test2</a>
+                                <a href="test3">Test3</a>
+                            </div>
+                        </div>
                     </div>
+                    -->
+                    <span id="username">Username</span>
+                    <div class="dropdown">
+                            <button class="dropbtn"><i class="material-icons" id="user-icon">account_circle</i></button>
+                            <div class="dropdown-content">
+                              <a href="#">Profile</a>
+                              <a href="#">Thing 2</a>
+                              <a href="#">Settings</a>
+                            </div>
+                    </div>                    
                 </div>
                 <!--<nav>
                     <ul>
@@ -78,10 +96,83 @@
             <section>
                 <div class="">
                     <h1 class="title">Goals <i class="material-icons open">open_in_new</i></h1>
+                    <div class="budget-goals">
+                        <h2>Budget Goals</h2>
+                        <h3>Week of 11/10/2019</h3>
+                        <div class="goals-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Expense Category</th>
+                                        <th>Forcasted Spending</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">fastfood</i></td>
+                                        <td class="category-name">Food</td>
+                                        <td>$50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">theaters</i></td>
+                                        <td class="category-name">Entertainment</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">train</i></td>
+                                        <td class="category-name">Transportation</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">shopping_cart</i></td>
+                                        <td class="category-name">Shopping</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">school</i></td>
+                                        <td class="category-name">School</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">receipt</i></td>
+                                        <td class="category-name">Other</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon"><i class="material-icons">restore</i></td>
+                                        <td class="category-name">Recurring/Bills</td>
+                                        <td>$30.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td><i class="large material-icons">attach_money</i></td>
+                                        <td>Total Budget</td>
+                                        <td>$250.00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="savings-goals">
+                        <h2>Savings Goals</h2>
+                        <div class="savings-table">
+                            <table>
+                                <thead>
+                                    <th>Short Term Goals</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><progress id="file" max="100" value="70"> 70% </progress></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <div class="stats">
                     <h1 class="title">Stats <i class="material-icons open">open_in_new</i></h1>
-                    <p id="piechart"></p>
                     <div class="by_category">
                          <table>
                              <th>Daily Expenses</th>
@@ -136,7 +227,6 @@
                              </tr>
                          </table>
                     </div>
-
                 </div>
             </section>
         </main>
