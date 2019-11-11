@@ -1,4 +1,10 @@
-# Cheap-n-Ease 
+# Cheap-n-Ease
+
+"I pledge my honor that I have abided by the Stevens Honor System"
+- Walker Bove
+- Adrian Gomes
+- Mathew Oyales
+- Rafael Sanchez
 
 CS-146 Project: Help college students better manage their finances through a streamlined application
 

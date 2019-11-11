@@ -1,18 +1,7 @@
 let history = [];
 let balance = 0.00;
 
-/*history = [
-  {
-    "loss": true,
-    "cost": "93.00",
-    "category": "school"
-  },
-  {
-    "loss": true,
-    "cost": "154.32",
-    "category": "train"
-  }
-]*/
+
 
 function set_balance(new_balance) {
     balance = Number.parseFloat(new_balance).toFixed(2)
@@ -93,36 +82,3 @@ function toggle_hist_form(add) {
 
     hist_form_open = !hist_form_open
 }
-
-
-/*google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-    let c = {}
-    for (let i = 0; i < history.length; i++) {
-        let cat = history[i].category
-        let cost = history[i].cost * history[i].loss
-        c[cat] = (c[cat])? c[cat] + cost : cost
-    }
-    c = [['Category', 'Money Spent']].concat(Object.entries(c))
-    let data = google.visualization.arrayToDataTable(c);
-
-  // Optional; add a title and set the width and height of the chart
-    let options = {
-        legend: 'none',
-        backgroundColor: {fill: 'none'},
-        width: 'calc(100% - 40px)',
-        chartArea: {left:'0',top:'0',height:'100%'},
-        tooltip: {trigger: 'none'},
-        pieSliceText: 'label',
-        enableInteractivity: false
-    };
-
-  // Display the chart inside the <div> element with id="piechart"
-    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
-}
-
-*/
-
