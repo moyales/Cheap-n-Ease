@@ -624,6 +624,7 @@ nav {
 
 .budget-goals {
     margin-bottom: 16px;
+    height: 50%;
 }
 
 tfoot {
@@ -636,3 +637,16 @@ tfoot {
     width: 95%;
     height: 900px;
 }
+
+#total {
+    flex: 1;
+    padding: 5px;
+    vertical-align: bottom;
+    line-height: 24px;
+}
+
+#username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+

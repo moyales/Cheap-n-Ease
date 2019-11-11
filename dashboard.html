@@ -34,13 +34,13 @@
                         </div>
                     </div>
                     -->
-                    <span id="username">Username</span>
+                    <p>Welcome, <span id="username">Username</span></p>
                     <div class="dropdown">
                             <button class="dropbtn"><i class="material-icons" id="user-icon">account_circle</i></button>
                             <div class="dropdown-content">
                               <a href="#">Profile</a>
-                              <a href="#">Thing 2</a>
                               <a href="#">Settings</a>
+                              <a href="login.html">Log Off</a>
                             </div>
                     </div>                    
                 </div>
@@ -225,12 +225,21 @@
                                  <td class="tcost">$<span>3.00</span></td>
                                  <td class="tperc"><span>12.5</span>%</td>
                              </tr>
+                             <tfoot>
+                                <tr>
+                                    <td><i class="large material-icons">attach_money</i></td>
+                                    <td id="total">Total Spent</td>
+                                    <td>$250.00</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
                          </table>
                     </div>
                 </div>
             </section>
         </main>
-        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="main.js" charset="utf-8"></script>
+        <script src="piechart.js"></script>
     </body>
 </html>
