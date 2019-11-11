@@ -569,6 +569,18 @@ nav {
     display: none;
 }
 
+.goals-table {
+    overflow-x: hidden;
+}
+
+.savings-goals {
+    height: 60%;
+}
+
+.savings-table {
+    overflow-x: hidden;
+}
+
 @media (max-width: 1000px) {
     main {
         grid-template-areas:
