@@ -93,52 +93,84 @@ header .right {
     height: 100%;
 }
 
-header #note {
-    height: 24px;
-    color: #999;
-    cursor: pointer;
-}
-
-header #new-note {
-    display: block;
+header .dropdown {
     position: relative;
-    top: -4px;
-    left: -12px;
-    background: var(--purple);
-    color: #fff;
-    height: 8px;
-    width: 8px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    /visibility: hidden;
-}
-
-header #profile {
-    display: flex;
+    display: inline-block;
     height: 24px;
-    margin-left: 50px;
     align-items: center;
     border-radius: 12px;
     color: #000;
     padding: 15px;
 }
 
-header #profile span {
+header #username {
     display: inline-block;
     line-height: 24px;
-    margin-right: 10px;
-    padding-right: 10px;
-    font-size: 12px;
 }
 
-header #profile i {
-    font-size: 36px;
-    margin-left: 10px;
+.dropbtn {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: var(--purple);
+    margin: 0;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+      background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: var(--purple);
+    color: #fff;
+}
+
+.budget-goals {
+    margin-bottom: 16px;
+}
+
+tfoot {
+    font-size: large;
+    font-weight: bold;
+}
+
+.donutchart {
+    margin-bottom: 10px;
+    width: 95%;
+    height: 900px;
+}
+
 
 .open {
     cursor: pointer;
+    padding-right: 10px;
     transition: all 300ms;
+    box-sizing: border-box;
 }
 
 .open:hover {
@@ -152,6 +184,7 @@ header #profile i {
 aside {
     grid-area: aside;
     height: 100%;
+    min-width: 250px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.3);
     padding: 20px;
@@ -315,8 +348,7 @@ aside .history form #cost:focus {
 
 aside .history form #up_or_down {
     display: flex;
-    width: 40%;
-    min-width: fit-content;
+    width: 100px;
     margin: 20px auto;
     background: #ddd;
     border-radius: 12px;
@@ -470,7 +502,7 @@ section {
 
 section div {
 	display: flex;  /*Changed display to flex for uniform spacing*/
-	flex-direction: column;    
+	flex-direction: column;
     /*display: inline-block;*/
     background: rgba(255, 255, 255, 0.5);
     border-radius: 12px;
@@ -478,7 +510,6 @@ section div {
     grid-row: span 2;
     width: calc(100% - 40px);
     overflow: scroll;
-    overflow-x: hidden;
 }
 
 section div h1 {
@@ -491,6 +522,8 @@ section div h1 {
     z-index: 5;
     font-weight: 300;
     font-size: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px 12px 0 0;
     border-bottom: 3px solid #000;
 }
 
@@ -532,27 +565,6 @@ section .stats .by_category table .header2 {
     margin: 10px 0;
 }
 
-
-/*section .stats #piechart div {
-    position: static;
-    width: calc(100% - 40px);
-    padding: 10px 20px;
-    background: #fff;
-    overflow: hidden;
-}
-
-section .stats #piechart div div {
-    display: flex;
-    width: 100% !important;
-    background: none;
-}
-
-section .stats #piechart div svg {
-    max-width: 100% !important;
-    height: 100%;
-}
-*/
-
 nav {
     display: none;
 }
@@ -566,73 +578,47 @@ nav {
         overflow: scroll;
     }
 
+    header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
     aside {
-        height: 100vh;
+        height: 120vh;
     }
 
     section {
         grid-template-columns: 100%;
         grid-template-rows: repeat(2, 1fr);
-        height: 100vh;
+        height: 180vh;
     }
 
-    section .stats {
+    .dropdown-content {
+        left: -60px;
     }
+
 }
 
-
-.dropbtn {
-    padding: none;
-    border-radius: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 130px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 10px 12px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-      background-color: #f1f1f1
+@media (max-width: 450px) {
+    header .left h1 {
+        font-size: 18px;
     }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #918b8a;
-  }
 
-.budget-goals {
-    margin-bottom: 16px;
-}
+    #username {
+        display: none !important;
+    }
 
-tfoot {
-    font-size: large;
-    font-weight: bold;
-}
+    header .left svg {
+        margin-right: 0;
+        height: 80%;
+    }
 
-.donutchart {
-    margin-bottom: 10px;
-    width: 95%;
-    height: 900px;
+    header .dropdown {
+        margin-left: 5px;
+        padding: 15px 0;
+    }
+
+    .dropdown-content {
+        left: -100px;
+        font-size: 14px;
+    }
 }

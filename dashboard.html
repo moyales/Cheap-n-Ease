@@ -19,54 +19,24 @@
                     <h1>Cheap<span>&</span>Ease</h1>
                 </div>
                 <div class="right">
-                    <!--<i class="material-icons" id="note">notifications</i>
-                    <i id="new-note"></i>-->
-                    <!--
-                    <div class="dropdown">
-                        <span id="username">Username</span>
-                        <div id="user-dropdown">
-                            <button onclick="openUserDropdown()" class="droptbn"><i class="material-icons" id="user-icon">account_circle</i></button>
-                            <div id="dropdown" class="dropdown-content">
-                                <a href="test1">Test1</a>
-                                <a href="test2">Test2</a>
-                                <a href="test3">Test3</a>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                     <span id="username">Username</span>
                     <div class="dropdown">
                             <button class="dropbtn"><i class="material-icons" id="user-icon">account_circle</i></button>
                             <div class="dropdown-content">
                               <a href="#">Profile</a>
-                              <a href="#">Thing 2</a>
                               <a href="#">Settings</a>
                             </div>
-                    </div>                    
+                    </div>
                 </div>
-                <!--<nav>
-                    <ul>
-                        <li title="balance" class="active">balance</li>
-                        <li title="history" class="inactive">history</li>
-                        <li title="stats" class="inactive">stats</li>
-                        <li title="goals" class="inactive">goals</li>
-                    </ul>
-                </nav>-->
             </header>
             <aside>
                 <div class="balance">
-                    <h2 class="title">Balance<i class="material-icons open">open_in_new</i></h2><!--sub balances - check against goals -->
+                    <h2 class="title">Balance<i class="material-icons open">open_in_new</i></h2>
                     <h1><span>$</span><i id="b_amount">0.00</i></h1>
                 </div>
                 <div class="history">
                     <h1 class="title">History<i class="material-icons open">open_in_new</i></h1>
-                    <ul class="recent">
-                        <!--<li class="loss">
-                            <i class="material-icons up-down">arrow_drop_down</i>
-                            <h2>$12.00</h2>
-                            <i class="material-icons category">fastfood</i>
-                        </li>-->
-                    </ul>
+                    <ul class="recent"></ul>
                     <form class="add_to_hist">
                         <i class="material-icons cancel" onclick="toggle_hist_form(false)">cancel</i>
                         <div class="scroll">
@@ -78,7 +48,6 @@
                                 <input type="radio" name="ud" id="radio_up" value="1" >
                                 <label for="radio_up" id="label_up"><i class="material-icons">arrow_drop_up</i></label>
                             </div>
-                            <!--<input type="text" id="category" value="" placeholder="category"/>-->
                             <select id="category">
                                 <option value="" disabled selected hidden>category</option>
                                 <option value="fastfood">Food</option>
@@ -94,7 +63,7 @@
                 </div>
             </aside>
             <section>
-                <div class="">
+                <div>
                     <h1 class="title">Goals <i class="material-icons open">open_in_new</i></h1>
                     <div class="budget-goals">
                         <h2>Budget Goals</h2>
@@ -230,7 +199,6 @@
                 </div>
             </section>
         </main>
-        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
