@@ -3,7 +3,6 @@ html, body {
     background: linear-gradient(-30deg, #ece3fc, #d3f0f5);
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-image: url("light-blue-background.jpg");
 }
 
 .ampersand{
@@ -25,11 +24,15 @@ header{
     border-radius: 15px;
 }
 
-.header-logo{
+.header-logo {
     height: 50px;
     width: auto;
     margin-left: 12px;
     margin-right: 6px;
+}
+
+#leaf, #leaf1 {
+    fill: #0ef0cc;
 }
 
 .navbar {
@@ -72,7 +75,7 @@ header #login-logo{
 
 #signup{
     float: right;
-    margin-right: 20px;   
+    margin-right: 20px;
 }
 
 #signup-bg{
@@ -167,7 +170,7 @@ input[type=text],[type=password], select{
 }
 
 .login-link:hover{
-    color: #7777ff; 
+    color: #7777ff;
 }
 
 #password-forget{
@@ -191,7 +194,7 @@ input[type=text],[type=password], select{
 
 /*Signup Styling*/
 #signup-page{
-    background-color: #f7ebd7; 
+    background-color: #f7ebd7;
 }
 
 #signup-page ul{
