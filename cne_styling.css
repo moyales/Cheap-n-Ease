@@ -35,6 +35,18 @@ header{
     fill: #0ef0cc;
 }
 
+#centered-logo{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#CNE-centered-logo{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar {
     width: 100%;
 }
