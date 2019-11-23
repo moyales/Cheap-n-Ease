@@ -6,14 +6,14 @@
 - Mathew Oyales
 - Rafael Sanchez
 
-CS-146 Project: Help college students better manage their finances through a streamlined application
+__CS-146 Project__: Help college students better manage their finances through a streamlined application
 
 This website will contain the following elements:
 * A homepage with elements such as:
     * financial dashboard
     * snapshot of spending history
     * a meter/bar displaying how well your spending habits match your goals
-    * other metrics to be determined
+    * income to spending ratio
 * A dummy login page with links to:
     * the homepage
     * the dummy sign-up page
@@ -25,3 +25,25 @@ This website will contain the following elements:
     * link to "confirmation" page
     * link back to login after "confirmation"
 * Profile information page
+
+**To Do**
+* Create a Presentation
+* Make sure HTML is **valid**
+* Revise CSS for more friendly, intuitive layout
+    * Revise login page for stylistic consistency
+    * Allow scrolling in dashboard
+    * Balance and other essential numbers relocated to top
+* JS Functionality
+    * Revise Login, Signup, and History with DOM/form functionality
+        * Appropriate errors for no input
+        * Alert boxes
+        * No "illegal" inputs either
+    * Create dynamic graphs for spending
+    * Write functions for calculating "essential numbers"
+        * Balance (done)
+        * Percentage Devitation
+        * Income/Spending Ratio
+* Create detailed pages for each category
+* Add provisions for income management
+
+*This to-do list will have items added or removed as necessary.*
