@@ -35,6 +35,18 @@ header{
     fill: #0ef0cc;
 }
 
+#centered-logo{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#CNE-centered-logo{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar {
     width: 100%;
 }
@@ -125,7 +137,7 @@ h2#box{
     padding-top: 8px;
 }
 
-input[type=text],[type=password], select{
+input[type=text],[type=password],[type=email], select{
     width: 80%;
     padding: 12px 16px;
     margin: 10px 0;
@@ -190,6 +202,10 @@ input[type=text],[type=password], select{
     background-color: rgb(44, 44, 112);
 }
 
+#recovery-sent{
+    display: none;
+}
+
 
 
 /*Signup Styling*/
@@ -211,22 +227,27 @@ input[type=text],[type=password], select{
 	font-weight: 400;
 	font-size: 1em;
 	letter-spacing: 1px;
-	background-color: #eb6d54;
+	background-color: #6994f0;
     outline: none;
     cursor: pointer;
 }
 
 #signup-page button:hover{
-    background-color: #ba5541;
+    background-color: #4269bd;
+}
+
+#signup-box{
+    max-width: 510px;
+    margin-bottom: 30px;
 }
 
 #aboutUs-paragraph{
     color:rgb(5, 5, 12);
     background-color: white;
-  border: solid rgb(238, 238, 169);
-  padding: 50px;
-  margin: 20px;
-  border-radius: 5px;
+    border: solid rgb(238, 238, 169);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.4);
     font-style: italic;
 }
@@ -234,10 +255,10 @@ input[type=text],[type=password], select{
 #cne-paragraph{
     color: black;
     background-color: white;
-  border: 1px solid red;
-  padding: 50px;
-  margin: 20px;
-  border-radius: 5px;
+    border: 1px solid red;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.4);
     font-style: italic;
 }
