@@ -36,6 +36,7 @@
       </div>
       <div class="col-75">
         <select id="incomeFrequency" name="incomeFrequency">
+        <option value="notApplicable">N/A</option>
           <option value="weekly">Weekly</option>
           <option value="biWeekly">Bi-weekly</option>
           <option value="monthly">Monthly</option>

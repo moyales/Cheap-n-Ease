@@ -27,8 +27,38 @@ class Main extends CI_Controller {
 
     public function index()
     {
+
+        $this->load->model('main_model');
+
+        // For Welcome, First Name
+        $data['firstName'] = $this->main_model->getFirstName();
+
+        // For History
+        $data['EIEIO'] = $this->main_model->getExpenseHistoryData();
+
+        // For BAN Balance
+        $data['income'] = $this->main_model->getIncomeData(); $data['income'] + 0;
+        $data['expenses'] = $this->main_model->getExpenseData(); $data['expenses'] + 0;
+        $data['balance'] = $data['income'] - $data['expenses'];
+        
+        // For BAN Budget Variance
+        $data['forecast'] = $this->main_model->getForecastData();
+        $data['variance'] = (1 - (($data['forecast'] - $data['expenses']) / $data['forecast'])) * 100;
+
+        // For BAN Expense-to-Income Ratio
+        $data['e2i'] = $data['expenses'] / $data['income'];
+
         $data['title'] = "Main";
-        $this->load->view('templates/main_header', $data);      
+        $this->load->view('templates/main_header', $data);     
+        $this->load->view('templates/main_income', $data);    
+        $this->load->view('templates/main_footer', $data);   
+    }
+
+    public function test123 () {
+        $data['title'] = "Main";
+        $this->load->view('includes/header', $data);     
+        $this->load->view('pages/body_nav', $data);    
+        $this->load->view('includes/footer', $data);           
     }
 
     public function view($page = 'index')
@@ -36,9 +66,29 @@ class Main extends CI_Controller {
         
         if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
         {
-                // Whoops, we don't have a page for that!
-                show_404();
+            // Whoops, we don't have a page for that!
+            show_404();
         }
+
+        $this->load->model('main_model');
+
+        // For Welcome, First Name
+        $data['firstName'] = $this->main_model->getFirstName();
+
+        // For History
+        $data['EIEIO'] = $this->main_model->getExpenseHistoryData();
+
+        // For BAN Balance
+        $data['income'] = $this->main_model->getIncomeData(); $data['income'] + 0;
+        $data['expenses'] = $this->main_model->getExpenseData(); $data['expenses'] + 0;
+        $data['balance'] = $data['income'] - $data['expenses'];
+        
+        // For BAN Budget Variance
+        $data['forecast'] = $this->main_model->getForecastData();
+        $data['variance'] = (1 - (($data['forecast'] - $data['expenses']) / $data['forecast'])) * 100;
+
+        // For BAN Expense-to-Income Ratio
+        $data['e2i'] = $data['expenses'] / $data['income'];
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
@@ -68,7 +118,7 @@ class Main extends CI_Controller {
     function manage_income()
 	{
         
-		$this->load->library('form_validation');
+        $this->load->library('form_validation');
 		
         // field name, error message, validation rules
 		$this->form_validation->set_rules('incomeType', 'Income Type', 'required');

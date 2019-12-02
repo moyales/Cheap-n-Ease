@@ -65,6 +65,7 @@ $route['main/review_history'] = 'main/review_history';
 $route['main/review_trends'] = 'main/review_trends';
 $route['main/getActualsData'] = 'main/getActualsData';
 $route['main/getExpenseHistoryData'] = 'main/getExpenseHistoryData';
+$route['main'] = 'main/index';
 $route['main/(:any)'] = 'main/view/$1';
 
 $route['(:any)'] = 'auth/view/$1';

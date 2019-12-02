@@ -24,8 +24,7 @@ class Main_model extends CI_Model {
     }
     
     function create_member()
-    {
-        
+    {      
         $new_member_insert_data = array(
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
@@ -39,8 +38,7 @@ class Main_model extends CI_Model {
     }
 
     function create_income()
-    {
-        
+    {     
         $new_income_insert_data = array(
             'username' => $_SESSION['username'],
             'incomeType' => $this->input->post('incomeType'),      
@@ -55,8 +53,7 @@ class Main_model extends CI_Model {
     }
 
     function create_expenses()
-    {
-        
+    {       
         $new_expenses_insert_data = array(
             'username' => $_SESSION['username'],
             'expenseType' => $this->input->post('expenseType'),
@@ -73,8 +70,7 @@ class Main_model extends CI_Model {
     }
 
     function create_goals()
-    {
-        
+    {      
         $new_goals_insert_data = array(
             'username' => $_SESSION['username'],
             'goalType' => $this->input->post('goalType'),
@@ -87,8 +83,7 @@ class Main_model extends CI_Model {
     }
 
     function create_forecast()
-    {
-        
+    {      
         $new_forecast_insert_data = array(
             'username' => $_SESSION['username'],
             'expectedIncome' => $this->input->post('expectedIncome'),
@@ -119,7 +114,6 @@ class Main_model extends CI_Model {
     }
 
     function getExpenseHistoryData () {
-
         $sql = "SELECT `username`, `expenseType`, `expenseCategory`, `expenseFrequency`, `oneTimeExpenseDate`, `expenseTitle`, `expenseDescription`, `expenseAmount` FROM `main_expenses`" . " WHERE username = '" . $_SESSION['username'] . "'";
 
         $query = $this->db->query($sql);
@@ -131,5 +125,59 @@ class Main_model extends CI_Model {
             return FALSE;
         }
     }
+
+    function getIncomeData () {
+        $sql = "SELECT cast(sum(incomeAmount) as float) as incomeAmount FROM main_income" . " WHERE username = '" . $_SESSION['username'] . "'";
+
+        $query = $this->db->query($sql);
+
+        if ($query->num_rows() > 0) {
+            return $query->row()->incomeAmount;
+        }
+        else {
+            return FALSE;
+        }
+    }    
+
+    function getExpenseData () {
+        $sql = "SELECT sum(expenseAmount) AS expenseAmount FROM main_expenses" . " WHERE username = '" . $_SESSION['username'] . "'";
+
+        $query = $this->db->query($sql);
+
+        if ($query->num_rows() > 0) {
+            return $query->row()->expenseAmount;
+        }
+        else {
+            return FALSE;
+        }
+    }  
+
+    function getForecastData () {
+        $sql = "SELECT sum(expectedIncome) - (sum(expectedFood) + sum(expectedEntertainment) + sum(expectedTransport) + sum(expectedShopping) + sum(expectedSchool) + sum(expectedRecurring) + sum(expectedOther)) AS forecast FROM cne.main_forecast" . " WHERE username = '" . $_SESSION['username'] . "'";
+  
+        $query = $this->db->query($sql);
+        
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            return $row->forecast;
+        }
+        else {
+            return FALSE;
+        }
+    }  
+
+    function getFirstName () {
+        $sql = "SELECT DISTINCT first_name AS firstName FROM cne.membership" . " WHERE username = '" . $_SESSION['username'] . "'";
+
+        $query = $this->db->query($sql);
+
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            return $row->firstName;
+        }
+        else {
+            return FALSE;
+        }
+    }      
 
 }

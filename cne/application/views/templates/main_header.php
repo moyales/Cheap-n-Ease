@@ -8,8 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>project_css/cne_styling.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>project_css/dashboard2.css">
+        <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />-->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>project_css/cne_styling.css?v={random number/string}">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>project_css/dashboard.css?v={random number/string}">
         <link rel="icon" href="cne-logo.png">
     </head>
     <body id="login">
@@ -34,14 +35,14 @@
                     <button class="navbtn">Review</button>
                     <div class="dropdown-content">
                         <a href="<?php echo base_url(); ?>main/main_summary">Summary</a>
-                        <a href="<?php echo base_url(); ?>main/getExpenseHistoryData">History</a>
+                        <a href="<?php echo base_url(); ?>main/main_history">History</a>
                         <a href="#">Trends</a>
                     </div>
                 </div>
             </div>
 
             <div class="right">
-                <p>Welcome, <strong id="username"><?php echo ($_SESSION['username']); ?></strong></p>
+                <p>Welcome, <strong id="username"><?php echo $firstName; ?></strong></p>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="material-icons" id="user-icon">account_circle</i></button>
                     <div class="dropdown-content">
@@ -56,17 +57,17 @@
 
         <div class="ban-box">
             <h2>Balance</h2>
-            <h3 class="ban">$0.00</h3>
+            <h3 class="ban">$<?php echo $balance; ?></h3>
         </div>
 
         <div class="ban-box">
             <h2>Budget Variance</h2>
-            <h3 class="ban">0.00%</h3>
+            <h3 class="ban"><?php echo number_format((float)$variance, 2, '.', ''); ?>%</h3>
         </div>
 
         <div class="ban-box">
-            <h2>I-to-E Ratio</h2>
-            <h3 class="ban">0.00%</h3>
+            <h2>E-to-I Ratio</h2>
+            <h3 class="ban"><?php echo number_format((float)$e2i, 2, '.', ''); ?></h3>
         </div>
 
 

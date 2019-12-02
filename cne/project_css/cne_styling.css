@@ -69,6 +69,7 @@ header{
 
 .main-navbar {
     margin-left: 50px;
+    display: flex;
 }
 
 .main-navbar li {
@@ -496,11 +497,30 @@ input.expected {
     margin-left: 50px;
 }
 
-table {
-    background-color: white;
-    padding: 6px;
+/*Table CSS*/
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-th {
-    border-bottom: black;
+.table {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: transparent; 
 }
+
+.table-thead {
+    text-align: left;
+}
+
+.report-container {
+    margin: 20px;
+}
+
+.report-title {
+    margin: 10px 0px 20px 0px;
+}
+

@@ -1,0 +1,655 @@
+:root {
+  --purple: #5041c3;
+  --teal: #0ef0cc;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: linear-gradient(-30deg, #ece3fc, #d3f0f5);
+    height: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        'header header header aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside'
+        'content content content aside aside aside aside';
+    grid-gap: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 50px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 12px;
+    align-items: center;
+    grid-area: header;
+    z-index: 100000;
+    margin: 5px;
+    float: center;
+}
+
+.main-header .left {
+    display: flex;
+    float: left;
+    align-items: center;
+    height: 100%;
+}
+
+.main-header .left svg {
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.main-header .left svg #leaf {
+    fill: var(--teal);
+}
+
+.main-header .left h1 {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.main-header .left #header-span{
+    font-weight: 100;
+}
+
+.main-header .right {
+    display: flex;
+    float: right;
+    align-items: center;
+    height: 100%;
+}
+
+
+.main-header .right p {
+    margin-left: 800px;
+}
+
+
+.main-header .dropdown {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    align-items: center;
+    border-radius: 12px;
+    color: #000;
+    padding: 15px;
+}
+
+.main-header #username {
+    display: inline-block;
+    line-height: 24px;
+}
+
+.navbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 4px;
+}
+
+.navbtn:hover {
+    background-color: #bbb;
+    cursor: pointer;
+}
+
+
+.dropbtn {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: var(--purple);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+      background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: var(--purple);
+    color: #fff;
+}
+
+.budget-goals {
+    margin-bottom: 16px;
+}
+
+tfoot {
+    font-size: large;
+    font-weight: bold;
+}
+
+.donutchart {
+    margin-bottom: 10px;
+    width: 95%;
+    height: 900px;
+}
+
+
+.open {
+    cursor: pointer;
+    padding-right: 10px;
+    transition: all 300ms;
+    box-sizing: border-box;
+}
+
+.open:hover {
+    opacity: 0.6;
+}
+
+.open:active {
+    opacity: 0.4;
+}
+
+aside {
+    grid-area: aside;
+    height: 100%;
+    min-width: 250px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+aside .balance {
+    display: grid;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(-45deg, var(--purple), #0d5ade);
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+aside .balance h2 {
+    margin: -20px;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+aside .balance .open {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+
+aside .balance h1 {
+    display: inline;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+aside .balance h1 #b_amount {
+    font-style: normal;
+}
+
+aside .balance h1 span {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    font-weight: 900;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+aside .history {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 220px);
+    background: #fff;
+    border-radius: 12px;
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+aside .history .add_btn {
+    position: sticky;
+    padding: 20px 0;
+    width: 100%;
+    color: #000;
+    background: #fff;
+    border-top: 3px solid #000;
+    border-radius: 0  0 12px 12px;
+    text-shadow: 3px 3px 0 #bbb;
+    cursor: pointer;
+    z-index: 13;
+    transition: all 500ms;
+}
+
+aside .history .add_btn:hover {
+    text-shadow: 6px 6px 2px #ccc !important;
+    background: #eee !important;
+}
+
+aside .history .add_btn:active {
+    text-shadow: none !important;
+    background: #ccc !important;
+}
+
+aside .history form {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 0;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: height 500ms ease-out;
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+form .scroll {
+    height: calc(100% - 80px);
+}
+
+aside .history form .cancel {
+    display: block;
+    color: #7d7d7d;
+    text-shadow: 3px 3px 0 #bbb;
+    cursor: pointer;
+    transition: text-shadow 500ms;
+}
+
+aside .history form .cancel:hover {
+    text-shadow: 6px 6px 2px #ccc;
+}
+
+aside .history form .cancel:active {
+    text-shadow: none;
+}
+
+aside .history form #cost {
+    display: inline-block;
+    width: 35%;
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    margin: 40px auto 0 auto;
+    font-size: 12px;
+    border-radius: 12px;
+    transition: all 400ms;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+aside .history form label[for="cost"] {
+    display: inline-block;
+    width: 5%;
+}
+
+aside .history form #cost:focus {
+    background: #fff;
+    outline: none;
+}
+
+aside .history form #up_or_down {
+    display: flex;
+    width: 100px;
+    margin: 20px auto;
+    background: #ddd;
+    border-radius: 12px;
+}
+
+aside .history form #up_or_down label {
+    flex: 1;
+    padding: 5px 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+aside .history form #up_or_down #label_down {
+    border-radius: 12px 0 0 12px;
+    transition: background 300ms;
+}
+
+aside .history form #up_or_down #label_down:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transition: background 300ms;
+}
+
+aside .history form #up_or_down #label_up:hover {
+    background: rgba(0, 255, 0, 0.3);
+}
+
+aside .history form #up_or_down #label_up {
+    border-radius: 0 12px 12px 0;
+}
+
+aside .history form #up_or_down input[type="radio"]:checked + #label_down {
+    background: linear-gradient(-45deg, #f96390, #f00);
+}
+
+aside .history form #up_or_down input[type="radio"]:checked + #label_up {
+    background: linear-gradient(-45deg, var(--teal), #0f0);
+}
+
+aside .history form #up_or_down label i {
+    line-height: 28px;
+}
+
+aside .history form #up_or_down input {
+    display: none;
+}
+
+aside .history form select {
+    display: block;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: #ddd;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 20px auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+aside .history form select option[value=""] {
+    color: #bbb;
+}
+
+aside .history h1 {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background: #fff;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 5;
+    font-weight: 300;
+    font-size: 18px;
+    border-bottom: 3px solid #000;
+}
+
+aside .history h1 i {
+    float: right;
+}
+
+aside .history .recent {
+    padding: 20px 0;
+    height: calc(100% - 170px);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+aside .history .recent li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #f1f1f1;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+aside .history .recent li .up-down {
+    float: left;
+    font-size: 36px;
+    color: #000;
+    opacity: 0.5;
+}
+
+aside .history .recent .growth {
+    background: linear-gradient(-45deg, var(--teal), #0f0);
+}
+
+aside .history .recent .loss {
+    background: linear-gradient(-45deg, #f96390, #f00);
+}
+
+aside .history .recent li h2 {
+    display: inline-block;
+    flex: 2;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 5px;
+}
+
+aside .history .recent li .category {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+section {
+    display: grid;
+    grid-gap: 20px;
+    grid-area: content;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section div {
+	display: flex;  /*Changed display to flex for uniform spacing*/
+	flex-direction: column;
+    /*display: inline-block;*/
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    grid-row: span 2;
+    width: calc(100% - 40px);
+    overflow: scroll;
+}
+
+section div h1 {
+    position: sticky;
+    top: -20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    z-index: 5;
+    font-weight: 300;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px 12px 0 0;
+    border-bottom: 3px solid #000;
+}
+
+section div h1 i {
+    float: right;
+}
+
+section .stats .by_category table {
+    width: 100%;
+    text-align: left;
+}
+
+section .stats .by_category table th {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+section .stats .by_category table tr {
+    display: flex;
+}
+
+section .stats .by_category td {
+    flex: 1;
+    padding: 5px;
+    vertical-align: bottom;
+    line-height: 24px;
+}
+
+section .stats .by_category .icon {
+    max-width: 24px;
+}
+
+.tcost, .tperc {
+    text-align: right;
+}
+
+section .stats .by_category table .header2 {
+    margin: 10px 0;
+}
+
+nav {
+    display: none;
+}
+
+.goals-table {
+    overflow-x: hidden;
+}
+
+.savings-goals {
+    height: 60%;
+}
+
+.savings-table {
+    overflow-x: hidden;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-areas:
+            'header'
+            'aside'
+            'content';
+        overflow: scroll;
+    }
+
+    header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    aside {
+        height: 120vh;
+    }
+
+    section {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        height: 180vh;
+    }
+
+    .dropdown-content {
+        left: -60px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    header .left h1 {
+        font-size: 18px;
+    }
+
+    #username {
+        display: none !important;
+    }
+
+    header .left svg {
+        margin-right: 0;
+        height: 80%;
+    }
+
+    header .dropdown {
+        margin-left: 5px;
+        padding: 15px 0;
+    }
+
+    .dropdown-content {
+        left: -100px;
+        font-size: 14px;
+    }
+}
