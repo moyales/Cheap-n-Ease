@@ -1,7 +1,6 @@
-let history = [];
-let balance = 0.00;
-
-
+let history = [0.00, 0.00]
+let balance = 0.00
+let cat_stats = {}
 
 function set_balance(new_balance) {
     balance = Number.parseFloat(new_balance).toFixed(2)
@@ -11,7 +10,7 @@ function set_balance(new_balance) {
 function add_hist(cost, category) {
     let new_payment = {
         loss: cost < 0,
-        cost: Math.abs(cost).toFixed(2),
+        cost: parseFloat(Math.abs(cost).toFixed(2)),
         category: category
     }
 
@@ -48,7 +47,9 @@ function add_hist(cost, category) {
     if(ul.hasChildNodes()) ul.insertBefore(new_li, ul.firstChild)
     else ul.appendChild(new_li)
 
+    history[0] += new_payment.cost
     history.push(new_payment)
+    compute_stats(new_payment.category, new_payment.cost)
     set_balance(parseFloat(balance) + parseFloat(cost))
 }
 
@@ -81,4 +82,11 @@ function toggle_hist_form(add) {
     }
 
     hist_form_open = !hist_form_open
+}
+
+
+function compute_stats(cat, cost) {
+    if (cat_stats[cat]) cat_stats[cat] += cost
+    else cat_stats[cat] = cost
+
 }
